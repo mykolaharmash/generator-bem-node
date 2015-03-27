@@ -1,0 +1,3 @@
+BEM.decl('<%= blockName %>', {
+
+});
