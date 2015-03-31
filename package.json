@@ -1,7 +1,7 @@
 {
   "name": "generator-bem-node",
   "version": "1.0.1",
-  "description": "Generators got bem-node projects",
+  "description": "Generators for bem-node projects",
   "keywords": [
     "yeoman-generator",
     "bem-node"
