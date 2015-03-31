@@ -1,13 +1,10 @@
 {
   "name": "generator-bem-node",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "version": "1.0.1",
+  "description": "Generators got bem-node projects",
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator",
+    "bem-node"
   ],
   "author": "Nikolay Garmash",
   "license": "ISC",
