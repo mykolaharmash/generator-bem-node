@@ -3,47 +3,46 @@ var _ = require('lodash'),
 
 
 module.exports = blockBase.extend({
+    constructor: function () {
+        blockBase.apply(this, arguments);
+
+        this.argument('modVal', {type: String, required: true});
+    },
+
     initialization: function () {
         this.initialize();
 
         this.sourceRoot(this.destinationRoot() + '/templates/block');
-        this.modConfig = {};
+        this.conf = {
+            modName: this.name,
+            modVal: this.modVal
+        };
     },
 
     prompting: {
-        modValue: function () {
-            var done = this.async();
-
-            this.prompt({
-                type: 'input',
-                name: 'value',
-                message: 'Modification value'
-            }, function (answer) {
-                _.assign(this.modConfig, answer);
-
-                done();
-            }.bind(this))
-        },
-
         blockType: function () {
-            this.promptBlockType(this.modConfig);
+            this.promptBlockType(this.conf);
         },
 
-        blockTemplate: function () {
-            this.promptHasTemplate(this.blockConfig);
+        modTemplate: function () {
+            this.promptHasTemplate(this.conf);
         },
 
         blockName: function () {
-            this.promptBlockName(this.modConfig);
+            this.promptBlockName(this.conf);
+        },
+
+        elemName: function () {
+            this.promptElemName(this.conf);
         },
 
         blockParts: function () {
-            this.promptParts(this.modConfig);
+            this.promptParts(this.conf);
         }
     },
 
     writing: function () {
-        this.createModParts(this.modConfig);
+        this.create(this.conf);
     }
 });
 

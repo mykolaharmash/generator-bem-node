@@ -1,12 +1,14 @@
 var _ = require('lodash'),
     blockBase = require('../app/block-base');
 
+
 module.exports = blockBase.extend({
     initialization: function () {
         this.initialize();
 
+        this.sourceRoot(this.destinationRoot() + '/templates/block');
         this.conf = {
-            block: this.name
+            elem: this.name
         };
     },
 
@@ -15,8 +17,12 @@ module.exports = blockBase.extend({
             this.promptBlockType(this.conf);
         },
 
-        blockTemplate: function () {
+        elemTemplate: function () {
             this.promptHasTemplate(this.conf);
+        },
+
+        blockName: function () {
+            this.promptBlockName(this.conf);
         },
 
         blockParts: function () {
