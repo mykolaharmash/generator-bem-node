@@ -10,7 +10,7 @@ module.exports = generators.NamedBase.extend({
             throw new Error('Run \'yo bem-node\' to configure project');
         }
 
-        this.sourceRoot(this.destinationRoot() + '/templates/block');
+        this.sourceRoot(__dirname + '/../templates/block');
     },
 
     promptBlockName: function (config) {
@@ -20,6 +20,13 @@ module.exports = generators.NamedBase.extend({
             type: 'input',
             name: 'block',
             message: 'Block name',
+            validate: function (answer) {
+                if (!answer) {
+                    return 'Block name is required';
+                }
+
+                return true;
+            }
         }, function (answer) {
             _.assign(config, answer);
 
@@ -58,7 +65,14 @@ module.exports = generators.NamedBase.extend({
             type: 'list',
             name: 'type',
             message: 'Block type',
-            choices: this.projectConf['blocks-types']
+            choices: this.projectConf['blocks-types'],
+            validate: function (answer) {
+                if (!answer.length) {
+                    return 'Block type is required';
+                }
+
+                return true;
+            }
         }, function (answer) {
             _.assign(config, answer);
 
@@ -90,12 +104,19 @@ module.exports = generators.NamedBase.extend({
             message: 'Parts block consists of',
             choices: [
                 'common',
-                'js',
                 'priv',
                 'server',
-                'deps',
-                'less'
-            ]
+                {name: 'js', value: 'js', checked: true},
+                {name: 'deps', value: 'deps', checked: true},
+                {name: 'less', value: 'less', checked: true}
+            ],
+            validate: function (answer) {
+                if (!answer.length) {
+                    return 'Choose at least one block-part';
+                }
+
+                return true;
+            }
         }, function (answer) {
             _.assign(config, answer);
 

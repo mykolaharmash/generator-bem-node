@@ -12,7 +12,6 @@ module.exports = blockBase.extend({
     initialization: function () {
         this.initialize();
 
-        this.sourceRoot(this.destinationRoot() + '/templates/block');
         this.conf = {
             modName: this.name,
             modVal: this.modVal
