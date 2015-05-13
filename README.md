@@ -85,7 +85,7 @@ __element template__ - see [bem-node:block](#block)
 __block name__  
 Name of block for which element creating
 
-__elemnt parts__ see [bem-node:block](#block)
+__element parts__ see [bem-node:block](#block)
 
 Produces for each selected tech: 
 
