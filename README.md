@@ -36,6 +36,7 @@ Default: `true`
 [__types list__]
 
 If project has types separation, specifies list of blocks types.
+
 Default: `list of directories inside blocks-root folder`
 
 Produces `.yo-rc.json`.
@@ -61,6 +62,7 @@ Is block have template or not
 __block parts__
 
 Parts (techs) which block consist of.
+
 Available techs:
 
 * common
@@ -70,7 +72,8 @@ Available techs:
 * deps
 
 Produces for each selected tech: 
-__blocks root__/[__block type__]/__name__.[__tech__].js
+
+(_blocks root_)/[(_block type_)]/(_name_).[(_tech_)].js
 
 ### Elem
 
@@ -94,7 +97,7 @@ __elemnt parts__ see [bem-node:block](#block)
 
 Produces for each selected tech: 
 
-__blocks root__/[__block type__]/__block name__/__block name_____name__.[__tech__].js
+(_blocks root_)/[(_block type_)]/(_block name_)/(_block name_)_(_name_).[(_tech_)].js
 
 ### Mod
 
@@ -103,6 +106,7 @@ Creates modification for block or element.
 Arguments:
 
 _name_ - name of modification
+
 _value_ - value of modification
 
 Wizard:
@@ -121,4 +125,4 @@ __modification parts__ see [bem-node:block](#block)
 
 Producesfor each selected tech: 
 
-__blocks root__/[__block type__]/__block name__/[__elemnet name__]/__block name__[__element name__]_name___value.[__tech__].js
+(_blocks root_)/[(_block type_)]/(_block name_)/[(_elemnet name_)]/(_block name_)[__(_element name_)](_name_)_ (_value_).[(_tech_)].js
