@@ -113,6 +113,5 @@ If creating modification for element specify element's name or leave it empty ot
 
 __modification parts__ see [bem-node:block](#block)
 
-Producesfor each selected tech: 
-
+Producesfor each selected tech:  
 (_blocks root_)/[(_block type_)]/(_block name_)/[(_elemnet name_)]/(_block name_)\[__(_element name_)\]\_(_name_)\_(_value_).[(_tech_)].js
