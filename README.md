@@ -87,8 +87,7 @@ Name of block for which element creating
 
 __element parts__ see [bem-node:block](#block)
 
-Produces for each selected tech: 
-
+Produces for each selected tech:  
 (_blocks root_)/[(_block type_)]/(_block name_)/(_block name_)_(_name_).[(_tech_)].js
 
 ### Mod
