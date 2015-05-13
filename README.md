@@ -23,18 +23,15 @@ Arguments: _none_
 
 Wizard:
 
-__blocks root__
-
+__blocks root__  
 Blocks hierarchy root.
 Default: `blocks`
 
-__types separation__
-
+__types separation__  
 Whether the project is divided to logical components (e.g. data, desktop, common, etc.)
 Default: `true`
 
-[__types list__]
-
+[__types list__]  
 If project has types separation, specifies list of blocks types.
 
 Default: `list of directories inside blocks-root folder`
@@ -51,16 +48,13 @@ _name_ - block's name
 
 Wizard:
 
-[__block type__]
-
+[__block type__]  
 Block's type if project divided by blocks types
 
-__block template__
-
+__block template__  
 Is block have template or not
 
-__block parts__
-
+__block parts__  
 Parts (techs) which block consist of.
 
 Available techs:
@@ -71,8 +65,7 @@ Available techs:
 * less
 * deps
 
-Produces for each selected tech: 
-
+Produces for each selected tech:  
 (_blocks root_)/[(_block type_)]/(_name_).[(_tech_)].js
 
 ### Elem
@@ -89,8 +82,7 @@ Wizard:
 
 __element template__ - see [bem-node:block](#block)
 
-__block name__
-
+__block name__  
 Name of block for which element creating
 
 __elemnt parts__ see [bem-node:block](#block)
@@ -105,8 +97,7 @@ Creates modification for block or element.
 
 Arguments:
 
-_name_ - name of modification
-
+_name_ - name of modification  
 _value_ - value of modification
 
 Wizard:
