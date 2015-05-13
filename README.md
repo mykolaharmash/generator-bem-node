@@ -108,8 +108,7 @@ __modification template__ - see [bem-node:block](#block)
 
 __block name__ - see [bem-node:elem](#elem)
 
-__element name__
-
+__element name__  
 If creating modification for element specify element's name or leave it empty otherwise
 
 __modification parts__ see [bem-node:block](#block)
