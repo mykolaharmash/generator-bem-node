@@ -115,4 +115,4 @@ __modification parts__ see [bem-node:block](#block)
 
 Producesfor each selected tech: 
 
-(_blocks root_)/[(_block type_)]/(_block name_)/[(_elemnet name_)]/(_block name_)[__(_element name_)](_name_)_ (_value_).[(_tech_)].js
+(_blocks root_)/[(_block type_)]/(_block name_)/[(_elemnet name_)]/(_block name_)\[__(_element name_)\](_name_)_ (_value_).[(_tech_)].js
