@@ -24,14 +24,17 @@ Arguments: _none_
 Wizard:
 
 __blocks root__
+
 Blocks hierarchy root.
 Default: `blocks`
 
 __types separation__
+
 Whether the project is divided to logical components (e.g. data, desktop, common, etc.)
 Default: `true`
 
 [__types list__]
+
 If project has types separation, specifies list of blocks types.
 Default: `list of directories inside blocks-root folder`
 
@@ -42,17 +45,21 @@ Produces `.yo-rc.json`.
 Creates new block.
 
 Arguments:
+
 _name_ - block's name
 
 Wizard:
 
 [__block type__]
+
 Block's type if project divided by blocks types
 
 __block template__
+
 Is block have template or not
 
 __block parts__
+
 Parts (techs) which block consist of.
 Available techs:
 
@@ -62,13 +69,15 @@ Available techs:
 * less
 * deps
 
-Produces: `__blocks root__/[__block type__]/__name__.[__tech__].js` for each selected tech
+Produces for each selected tech: 
+__blocks root__/[__block type__]/__name__.[__tech__].js
 
 ### Elem
 
 Creates new element for block.
 
 Arguments:
+
 _name_ - element's name
 
 Wizard:
@@ -78,17 +87,21 @@ Wizard:
 __element template__ - see [bem-node:block](#block)
 
 __block name__
+
 Name of block for which element creating
 
 __elemnt parts__ see [bem-node:block](#block)
 
-Produces: `__blocks root__/[__block type__]/__block name__/__block name_____name__.[__tech__].js` for each selected tech
+Produces for each selected tech: 
+
+__blocks root__/[__block type__]/__block name__/__block name_____name__.[__tech__].js
 
 ### Mod
 
 Creates modification for block or element.
 
 Arguments:
+
 _name_ - name of modification
 _value_ - value of modification
 
@@ -101,8 +114,11 @@ __modification template__ - see [bem-node:block](#block)
 __block name__ - see [bem-node:elem](#elem)
 
 __element name__
+
 If creating modification for element specify element's name or leave it empty otherwise
 
 __modification parts__ see [bem-node:block](#block)
 
-Produces: `__blocks root__/[__block type__]/__block name__/[__elemnet name__]/__block name__[__element name__]_name___value.[__tech__].js` for each selected tech
+Producesfor each selected tech: 
+
+__blocks root__/[__block type__]/__block name__/[__elemnet name__]/__block name__[__element name__]_name___value.[__tech__].js
